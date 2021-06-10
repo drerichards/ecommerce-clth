@@ -1,24 +1,32 @@
-import React from 'react';
+import {React, Component} from 'react';
 import './scss/menu_directory.scss'
 
 import MenuItem from 'components/menu_item/MenuItem_Comp'
+import dir_sections from 'data/directory_data'
 
-const MenuDirectory = ({sections}) => {
-    return (
-        <div className="menu-directory">
-            {sections.map(({id, title, imageUrl, linkUrl, size}) => {
-                return (
-                    <MenuItem 
-                        key={id} 
-                        title={title}
-                        imgUrl={imageUrl}
-                        linkUrl={linkUrl}
-                        size={size}
-                     />
-                )
-            })}
-        </div>
-    );
+class MenuDirectory extends Component {
+    constructor() {
+        super()
+
+        this.state = {
+            sections: dir_sections
+        }
+    }
+
+    render() {
+            return (
+            <div className="menu-directory">
+                {this.state.sections.map(({id, ...sectionProps}) => {
+                    return (
+                        <MenuItem 
+                            key={id} 
+                            {...sectionProps}
+                        />)
+                })}
+            </div>
+        );
+    }
+
 }
 
 export default MenuDirectory;
