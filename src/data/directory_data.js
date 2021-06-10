@@ -1,4 +1,4 @@
-const directory_sections = [{
+const directory_data = [{
         title: 'hats',
         imageUrl: 'https://i.ibb.co/cvpntL1/hats.png',
         id: 1,
@@ -32,4 +32,4 @@ const directory_sections = [{
     }
 ]
 
-export default directory_sections
+export default directory_data
