@@ -1,4 +1,4 @@
-const inventory_data = [{
+const collection_data = [{
         id: 1,
         title: 'Hats',
         routeName: 'hats',
@@ -241,4 +241,4 @@ const inventory_data = [{
 ]
 
 
-export default inventory_data
+export default collection_data
